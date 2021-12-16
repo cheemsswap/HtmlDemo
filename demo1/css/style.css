@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    width: 100px;
+    height: 100px;
+    background:darkgrey;
+    border-radius: 10%;
+    position:relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+div p{
+    position:absolute;
+    width: 70px;
+    height: 5px;
+    background: darkturquoise;
+    border-radius: 5px;
+    left: 15px;
+    transition: all 0.15s;
+}
+div p:nth-child(1){
+    transform: translateY(-15px);
+    width: 50px;
+}
+div p:nth-child(3){
+    transform: translateY(15px);
+    width: 30px;
+}
+
+div.active p:nth-child(1){
+    transform: translateY(0px) rotate(45deg);
+    width: 70px;
+    transition: all 0.3s;
+}
+div.active p:nth-child(2){
+    transform: translateX(100px);
+}
+div.active p:nth-child(3){
+    transform: translateY(0px) rotate(-45deg);
+    width: 70px;
+}
