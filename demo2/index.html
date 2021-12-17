@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 动态搜索框</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <p>参考视频：https://www.bilibili.com/video/BV1eg411P7rn</p>
+    <div class="search">
+        <div class="icon"></div>
+        <input id="mysearch" type="text" placeholder="输入关键字">
+        <div class="clear"></div>
+    </div>
+
+</body>
+<script>
+
+    let icon = document.querySelector(".icon")
+    let search = document.querySelector(".search")
+    icon.onclick = function () {
+        search.classList.toggle("active")
+    }
+
+    let clear = document.querySelector(".clear")
+    let mysearch = document.getElementById("mysearch")
+    clear.onclick = function () {
+        mysearch.value = ""
+    }
+</script>
+
+</html>
